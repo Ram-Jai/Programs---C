@@ -1,0 +1,13 @@
+// swap using bitwise XOR
+#include <stdio.h>
+int main()
+{
+    int x,y;
+    printf("Enter the numbers:\n");
+    scanf("%d%d",&x,&y);
+    printf("\nThe numbers before swapping are %d and %d\n",x,y);
+    x=x^y;
+    y=x^y;
+    x=x^y;
+    printf("The numbers after swapping are %d and %d",x,y);
+}

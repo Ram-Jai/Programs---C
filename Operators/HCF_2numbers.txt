@@ -1,0 +1,14 @@
+//HCF of 2 numbers
+#include <stdio.h>
+int main()
+{
+    int x,y,i=1,hcf;
+    printf("Enter the numbers:\n");
+    scanf("%d%d",&x,&y);
+    while (i<=x){
+    if (x%i==0 && y%i==0)
+        hcf=i;
+    i++;
+    }
+    printf("\nThe HCF of %d and %d is %d",x,y,hcf);
+}

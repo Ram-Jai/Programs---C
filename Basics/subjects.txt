@@ -1,0 +1,12 @@
+// Sum and percentage of 5 subjects
+#include <stdio.h>
+int main()
+{
+    int s1,s2,s3,s4,s5;
+    float sum,percentage;
+    printf("Enter the marks obtained in the five subjects:\n");
+    scanf("%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5);
+    sum=s1+s2+s3+s4+s5;
+    percentage=(sum/500)*100;
+    printf("\nThe sum and percentage of 5 sujects are %.f and %.2f",sum,percentage);
+}

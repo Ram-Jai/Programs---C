@@ -1,0 +1,11 @@
+// Calculate simple interest
+#include <stdio.h>
+int main()
+{
+    int P; //P=Principal, 
+    float T,R,SI; // T=Time, in years; R=Interest rate; SI=Simple Interest
+    printf("Enter the principal, time and rate of interest:\n");
+    scanf("%d%f%f",&P,&T,&R);
+    SI=P*T*R;
+    printf("\nThe simple interest is %.2f",SI);
+}

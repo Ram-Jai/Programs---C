@@ -1,0 +1,9 @@
+// even or odd number without arithmetic and relational operators
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number:\n");
+    scanf("%d",&n);
+    n&1 ? printf("Odd") : printf("Even");
+}

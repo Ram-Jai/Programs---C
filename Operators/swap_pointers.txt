@@ -1,0 +1,15 @@
+// Swap using pointers
+#include <stdio.h>
+int main()
+{
+    int x,y,*a,*b,c;
+    printf("Enter the numbers:\n");
+    scanf("%d%d",&x,&y);
+    a=&x;
+    b=&y;
+    printf("\nThe numbers before swapping are %d and %d\n",x,y);
+    c=*a;
+    *a=*b;
+    *b=c;
+    printf("The numbers after swapping are %d and %d",x,y);
+}

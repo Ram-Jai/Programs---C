@@ -1,0 +1,12 @@
+// even or odd number using bitwise
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number:\n");
+    scanf("%d",&n);
+    if (n&1) 
+        printf("Odd");
+    else
+        printf("Even");
+}
