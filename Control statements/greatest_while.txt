@@ -1,0 +1,13 @@
+// greatest of three numbers using while loop
+#include <stdio.h>
+int main()
+{
+    int a,b,c,i=0;
+    printf("Enter the numbers:");
+    scanf("%d%d%d",&a,&b,&c);
+    printf("\nThe greatest of thr three numbers is\n");
+    while (i<1){
+        (a>b) ? ((a>c) ? printf("%d",a) : printf("%d",c)) : ((b>c) ? printf("%d",b) : printf("%d",c));
+        i++;
+    }
+}

@@ -1,0 +1,17 @@
+//add numbers until ZERO is entered
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+    static int i;
+    printf("Enter the number ");
+    scanf("%d",&i);
+    if (i==0){
+        printf("%d and EXIT",i);
+        exit(0);
+    }
+    else{
+        printf("%d\n",i+=i);
+        main();
+    }
+}
+        
