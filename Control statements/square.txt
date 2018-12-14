@@ -1,0 +1,8 @@
+// square of number
+#include<stdio.h>
+int main() {
+    float x;
+    printf("Enter the number\n");
+    scanf("%f",&x);
+    printf("The square of the %f is %f",x,x*x);
+}
