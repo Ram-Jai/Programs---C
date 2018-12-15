@@ -1,0 +1,22 @@
+//calculate percentage and division
+#include<stdio.h>
+int main() {
+    float a,b,c,percent;
+    printf("Enter the marks of the three subjects\n");
+    scanf("%f%f%f",&a,&b,&c);
+    printf("The percentage of marks obtained is %f\n",(a+b+c)*100/300);
+    
+    printf("The grade obtained is ");
+    if (percent<=100 && percent<=91)
+        printf("A");
+    else if (percent<=90 && percent<=81)
+        printf("B");
+    else if (percent<=80 && percent<=71)
+        printf("C");
+    else if (percent<=70 && percent<=61)
+        printf("D");    
+    else if (percent<=60 && percent<=51)
+        printf("E");
+    else
+        printf("F");
+}

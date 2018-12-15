@@ -1,0 +1,12 @@
+// check eligibility for vote casting
+#include <stdio.h>
+int main()
+{
+    unsigned int age;
+    printf("Enter the age\n");
+    scanf("%d",&age);
+    if (age>=18)
+        printf("He/She is eligible to cast their vote");
+    else 
+        printf("He/She is not eligible to cast their vote");
+}
