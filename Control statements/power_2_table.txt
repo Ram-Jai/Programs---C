@@ -1,0 +1,8 @@
+// power of 2 from 0 to 10
+#include<stdio.h>
+int main() {
+    int i,n=1,m=1;
+    printf("1\t1\n");
+    for (i=1;i<=10;i++)
+        printf("%d\t%d\n",m*=2,n*=-2);
+}
