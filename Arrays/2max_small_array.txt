@@ -1,0 +1,16 @@
+// find 2 maximum no.s and their product
+#include<stdio.h>
+int main() {
+    int a[20],i,n;
+    printf("Enter the number of elements in the array\n");
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for (i=0;i<n-1;i++){
+        if (a[i]>a[i+1])
+            a[i]=a[i]+a[i+1]-(a[i+1]=a[i]);
+        else
+            continue;
+    }
+    printf("The smallest and the second largest element in the array are %d and %d\n",a[0],a[n-2]);
+}

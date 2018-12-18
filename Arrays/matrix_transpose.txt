@@ -1,0 +1,28 @@
+// transpose of a matrix
+#include<stdio.h>
+int main() {
+    int a[10][10],b[10][10], i,j, m,n;
+    printf("Enter the order of a\t");
+    scanf("%d%d",&m,&n);
+    printf("\nEnter the elements of the matrix\n");
+    for (i=0;i<m;i++)
+        for (j=0;j<n;j++)
+            scanf("%d",&a[i][j]);
+    printf("The original matrix is\n");
+    for (i=0;i<m;i++){
+        for (j=0;j<n;j++)
+            printf("%d  ",a[i][j]);
+        printf("\n");
+    }
+    //  transposing the given matrix
+    for (i=0;i<m;i++)
+        for (j=0;j<n;j++)
+            b[j][i]=a[i][j];
+    printf("\nThe transposed matrix is\n");
+    for (i=0;i<m;i++){
+        for (j=0;j<n;j++)
+            printf("%d  ",b[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
