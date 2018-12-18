@@ -1,0 +1,14 @@
+// Simple interest using all variables as pointers
+#include<stdio.h>
+int main() {
+    int p,t,r,si;
+    int *P,*T,*R,*SI;
+    P=&p;
+    T=&t;
+    R=&r;
+    SI=&si;
+    printf("Enter the principal, time period and rate of interest\n");
+    scanf("%d%d%d",&p,&t,&r);
+    *SI = *P * *T * *R;
+    printf("The simple interest is %d\n",*SI);
+}

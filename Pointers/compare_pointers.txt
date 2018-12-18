@@ -1,0 +1,15 @@
+// multiply two numbers using pointers
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    int *x,*y;
+    printf("Enter the two numbers\n");
+    scanf("%d%d",&a,&b);
+    x=&a;
+    y=&b;
+    if (*x>*y)
+        printf("%d is greater than %d",*x ,*y);
+    else
+        printf("%d is less than %d",*x,*y);
+}

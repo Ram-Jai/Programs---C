@@ -1,0 +1,8 @@
+// decleration of a pointer
+#include <stdio.h>
+int main()
+{
+    int i;
+    int *p;
+    p=&i;
+}
