@@ -1,0 +1,21 @@
+// insert an element in a specific position
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,a[n],i,k;
+    printf("\nEnter the range of the array\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements in the array\n");
+    for (i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("\nInsert an element in the given place\n");
+    scanf("%d%d",&i,&k);
+    if (i<n && i>=0){
+        a[i]=k;
+        printf("\nThe new element in %d place is %d\n",i,k);
+    }
+    else 
+        exit(0);
+}
