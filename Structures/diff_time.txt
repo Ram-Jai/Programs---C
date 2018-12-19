@@ -1,0 +1,27 @@
+// difference between two time periods
+#include<stdio.h>
+
+struct time{
+    int h;
+    int m;
+    int s;
+}t1,t2;
+
+int main(){
+    int hr, min, sec;
+    printf("Enter the first time period\n");
+    scanf("%d%d%d",&t1.h,&t1.m,&t1.s);
+    printf("Enter the second time period\n");
+    scanf("%d%d%d",&t2.h,&t2.m,&t2.s);
+    hr = t2.h - t1.h;
+    min = t2.m - t1.m;
+    sec = t2.s - t1.s;
+    
+    if (min<0)
+        min+=60;
+    if (sec<0)
+        sec+=60;
+    
+    printf("\nThe difference between the two time periods is %dhrs, %d mins and %dsecs\n",hr,min,sec);
+    
+}

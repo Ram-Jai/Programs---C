@@ -1,0 +1,29 @@
+//  compare dates
+#include<stdio.h>
+
+struct date
+{
+    int d;
+    int m;
+    int y;
+};
+ 
+int main()
+{
+    struct date e[2];
+    int i;
+    int D,M,Y;
+    
+    printf("\nEnter date, month and year \n");
+    for(i = 0; i < 2; i++ )
+        scanf("%d%d%d",&e[i].d,&e[i].m,&e[i].y);
+ 
+    printf("\n\n\n");
+    D = e[1].d-e[0].d;
+    M = e[1].m-e[0].m;
+    Y = e[1].y-e[0].y;
+    if (D==0 && M==0 && Y==0)
+        printf("\nDates are equal\n");
+    else
+        printf("\nDates are not equal\n");
+}

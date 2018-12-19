@@ -1,0 +1,22 @@
+// add two complex numbers by structure and function
+
+#include<stdio.h>
+void complex_add (int, int, int, int);
+
+struct complex{
+    int x;
+    int y;
+}z1,z2;
+
+void complex_add (int x1,int y1, int x2, int y2) {
+    int X,Y;
+    X=x1+x2;
+    Y=y1+y2;
+    printf("The sum of the two complex numbers is (%d,%d)",X,Y);    
+}
+
+int main(){
+    printf("Enter the complex numbers\n");
+    scanf("%d%d%d%d",&z1.x,&z1.y,&z2.x,&z2.y);
+    complex_add(z1.x,z1.y,z2.x,z2.y);
+}
