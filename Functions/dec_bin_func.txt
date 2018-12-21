@@ -1,0 +1,20 @@
+// convert decimal to binary
+#include<stdio.h>
+void dTOb(int);
+int main(){
+    int a;
+    printf("Enter the number:\n");
+    scanf("%d",&a);
+    dTOb(a);
+}
+void dTOb(int a){
+    int k;
+    long int c;
+    for (c = 8; c >= 0; c--) {
+    k = a >> c;
+    if (k & 1)
+      printf("1");
+    else
+      printf("0");
+  }
+}

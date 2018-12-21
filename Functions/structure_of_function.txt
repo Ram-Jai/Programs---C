@@ -1,0 +1,9 @@
+// example for showing the structure of a function
+#include<stdio.h>
+int display(int);
+int main(){
+    display(5);
+}
+int display(int x){
+    printf("%d",x);
+}

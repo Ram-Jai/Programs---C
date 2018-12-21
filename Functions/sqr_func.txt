@@ -1,0 +1,12 @@
+// square of a number
+#include<stdio.h>
+void square(float);
+int main(){
+    float n;
+    printf("Enter the number:\n");
+    scanf("%f",&n);
+    square(n);
+}
+void square(float n){
+    printf("%f",n*n);
+}

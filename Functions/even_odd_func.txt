@@ -1,0 +1,15 @@
+// check even or odd
+#include<stdio.h>
+void eORo(int);
+int main(){
+    int a;
+    printf("Enter the number:\n");
+    scanf("%d",&a);
+    eORo(a);
+}
+void eORo(int a){
+    if (a&1)
+        printf("%d is odd",a);
+    else
+        printf("%d is even",a);
+}
