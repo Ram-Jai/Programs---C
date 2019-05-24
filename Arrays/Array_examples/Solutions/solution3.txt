@@ -1,5 +1,5 @@
 // find the second largest element in an array
-
+#include<stdio.h>
 void main() 
 {
 	int n,i,j,count;			//n-size of array
