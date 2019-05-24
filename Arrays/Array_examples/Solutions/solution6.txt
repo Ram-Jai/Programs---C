@@ -1,0 +1,20 @@
+//program to print the largest and smallest elements in an array
+
+#include<stdio.h>
+
+void main()
+{
+	int n,i,j;				//n-size of array		
+	scanf("%d",&n);
+	
+	int a[n];				//a[n]-array
+	for (i=0;i<n;i++)
+		scanf("%d",&a[i]);
+		
+	for(i=0;i<n-1;i++)			//bubble sort
+	    for(j=0;j<n-i-1;j++)
+		if(a[j]>a[j+1]) 
+		    a[j+1]=a[j]+a[j+1]-(a[j]=a[j+1);
+		    
+	printf("In the given array, the largest element is %d and the smallest element is %d",a[n-1],a[0]);
+}
