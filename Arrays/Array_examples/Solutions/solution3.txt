@@ -2,17 +2,17 @@
 
 void main() 
 {
-	int n,i,j,count;
+	int n,i,j,count;			//n-size of array
 	scanf("%d",&n);
 	
-	int a[n];
+	int a[n];				//a[n]-array
 	for (i=0;i<n;i++)
 		scanf("%d",&a[i]);
 
-	for(i=0;i<n-1;i++)
+	for(i=0;i<n-1;i++)			//bubble sort
 	    for(j=0;j<n-i-1;j++)
 		if(a[j]>a[j+1]) 
 		    a[j+1]=a[j]+a[j+1]-(a[j]=a[j+1);
 		
-    	printf("%d ",a[n-2]);
+    	printf("%d ",a[n-2]);			//print the second largest element
 }
