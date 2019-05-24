@@ -5,19 +5,19 @@
 void main() 
 {
 	int n,i,j,count;
-	scanf("%d",&n);
+	scanf("%d",&n);		//n-size of array
 	
-	int a[n];
+	int a[n];		//a[n]-array
 	for (i=0;i<n;i++)
 		scanf("%d",&a[i]);
 
 	for (i=0;i<n;i++){
-		count=0;
+		count=0;	//to count number of times a particluar number has occured
 		for (j=0;j<n;j++){
 			if (a[j]==a[i])
 				count++;
 		}
-		if (count%2==1)
+		if (count%2==1)	//if 'count' is an odd number, then that number is printed
 			printf("%d ",a[i]);
 	}
 }
