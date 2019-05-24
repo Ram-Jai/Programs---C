@@ -3,19 +3,19 @@
 #include<stdio.h>
  void main()
  {
- 	int n,i;
+ 	int n,i;					//n-size of array
  	scanf("%d",&n);
  	
- 	int a[n];
+ 	int a[n];					//a[n]-array
  	for (i=0;i<n;i++)
  		scanf("%d",&a[i]);
  	
 	for (i=0;i<n;i++){
-		if (a[i]==0 && i==0)
+		if (a[i]==0 && i==0)			//if first element is '0', then it is equal to '1'
 			a[i]=1;
-		if (a[i]==0 && i==n-1)
+		if (a[i]==0 && i==n-1)			//if last element is '0', then it is equal to 'n'
 			a[i]=n;
-		if (a[i]==0 && i!=0 && i!=n-1)
+		if (a[i]==0 && i!=0 && i!=n-1)		//if any other element that first and last is '0', then it is the average 								of the before and after elements
 			a[i]=(a[i-1]+a[i+1])/2;
 	}
 	
