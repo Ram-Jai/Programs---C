@@ -4,10 +4,10 @@
 
 void main() 
 {
-	int n,i,j,count;
+	int n,i,j,count;			//n-size of array
 	scanf("%d",&n);
 	
-	int a[n];
+	int a[n];				//a[n]-array
 	for (i=0;i<n;i++)
 		scanf("%d",&a[i]);
 
