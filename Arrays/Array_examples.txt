@@ -1,0 +1,5 @@
+1. Find the number which occurs odd number of times in an array.
+2. Find the missing number in an increasing sequence, given that the sequence is from 1 to n.
+3. Find the second largest number in a given array.
+4. Rotate a sorted array 'k' times.
+5. Given an array of random numbers, push all the zeroes to the end of the array.
