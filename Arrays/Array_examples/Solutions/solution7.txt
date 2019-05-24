@@ -1,0 +1,24 @@
+//program to pass array to a function
+
+#include<stdio.h>
+
+void array(int n,int a[n]);
+void main()
+{
+	int n,i;			//n-size of array
+	scanf("%d",&n);
+	
+	int a[n];			//a[n]-array
+	for (i=0;i<n;i++)
+		scanf("%d",&a[i]);
+		
+	array(n,a);
+}
+
+void array (int n,int a[n])
+{
+	int i;
+	for (i=0;i<n;i++)
+		printf("%d ",a[i]);
+}
+
