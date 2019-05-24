@@ -1,0 +1,24 @@
+//find the missing number in the sequence, sequence from 1 to n
+
+#include<stdio.h>
+ void main()
+ {
+ 	int n,i;
+ 	scanf("%d",&n);
+ 	
+ 	int a[n];
+ 	for (i=0;i<n;i++)
+ 		scanf("%d",&a[i]);
+ 	
+	for (i=0;i<n;i++){
+		if (a[i]==0 && i==0)
+			a[i]=1;
+		if (a[i]==0 && i==n-1)
+			a[i]=n;
+		if (a[i]==0 && i!=0 && i!=n-1)
+			a[i]=(a[i-1]+a[i+1])/2;
+	}
+	
+	for (i=0;i<n;i++)
+		printf("%d",a[i]);
+}
