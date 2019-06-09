@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct adjnode  
+{
+    int data;
+    struct adjnode *next;
+};
+
+struct adjlist
+{
+    struct adjnode *head;
+};
+
+struct Graph
+{
+  int noofnodes;
+  struct adjlist *array;
+};
+
+struct adjnode *newadjnode(int data)
+{
+    struct adjnode *newadjnode=(struct adjnode*)malloc(sizeof(struct adjnode));
+    newadjnode->data=data;
+    newadjnode->next=NULL;
+    
+    return newadjnode;
+}
+
+struct Graph *creategraph(int noofnodes)
+{
+    int i;
+    struct Graph *graph=(struct Graph*)malloc(sizeof(struct Graph));
+    graph->noofnodes=noofnodes;
+    graph->array=(struct adjlist*)malloc(sizeof(struct adjlist)*noofnodes);
+    
+    for (i=0;i<noofnodes;i++)
+        graph->array[i].head=NULL;
+        
+    return graph;
+}
+
+struct Graph *addedge(struct Graph *graph, int src, int dest)
+{
+    struct adjnode *newnode = newadjnode(dest);
+    newnode->next = graph->array[src].head;
+    graph->array[src].head = newnode;
+    
+    newnode = newadjnode(src);
+    newnode->next = graph->array[dest].head;
+    graph->array[dest].head = newnode;
+
+    return graph;
+}
+
+void printgraph(struct Graph *graph)
+{
+    int i;
+    for (i=0 ; i < graph->noofnodes ; i++)
+    {
+        struct adjnode *node = graph->array[i].head;
+        printf("\nAdjency list of vertex %d is:  %d",i,i);
+        while (node)
+        {
+            printf("-> %d",node->data);
+            node=node->next;
+        }
+        printf("-> X\n");
+    }
+}
+
+int main()
+{
+    int n,i,src,dest;
+    printf("Enter the number of nodes\n");
+    scanf("%d",&n);
+    struct Graph *graph = creategraph(n);
+    printf("\nEnter the number of edges\n");
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d%d",&src,&dest);
+        graph = addedge(graph, src, dest);
+    }
+    printgraph(graph);
+}
